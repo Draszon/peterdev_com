@@ -12,8 +12,21 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                //alapértelmezett az inter-font, amúgy 
+                sans: ['Inter', 'sans-serif', ...defaultTheme.fontFamily.sans],
+                inter: ['Inter', 'sans-serif'],
+                ubuntu: ['Ubuntu', 'sans-serif'],
             },
+            colors: {
+                //saját színek
+                green: '#00A96E',
+                orange: '#FF6E14',
+                white: 'FFFFFF',
+                mainBg: '#082026',
+                menuBg: '#15333B',
+                font: '#082026',
+                
+            }
         },
     },
 
