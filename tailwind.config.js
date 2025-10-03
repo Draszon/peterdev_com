@@ -23,6 +23,20 @@ export default {
                 white: '#FFFFFF',
                 darkGreen: '#082026',
                 darkerGreen: '#15333B',
+            },
+            keyframes: {
+                appear: {
+                    '0%': {opacity: '0'},
+                    '100%': {opacity: '1'},
+                },
+                disappear: {
+                    '0%': {opacity: '1'},
+                    '100%': {opacity: '0'},
+                },
+            },
+            animation: {
+                appear: '.2s ease forwards',
+                disappear: '.2s ease forwards',
             }
         },
     },

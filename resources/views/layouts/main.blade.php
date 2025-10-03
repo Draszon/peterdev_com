@@ -36,49 +36,52 @@
                     <p class="font-ubuntu font-bold text-green flex items-center text-xl">Peter</p>
                 </div>
                 <div class="flex relative ml-auto w-10 h-10 cursor-pointer">
-                    <img src="{{ asset('images/menu_icons/hamburger-menu-closed.svg') }}" alt="hamburger menu"
+                    <img id="menu-closed" src="{{ asset('images/menu_icons/hamburger-menu-closed.svg') }}" alt="hamburger menu"
                         class="w-10 absolute top-0 left-0">
-                    <img src="{{ asset('images/menu_icons/hamburger-menu-opened.svg') }}" alt="hamburger menu"
+                    <img id="menu-opened" src="{{ asset('images/menu_icons/hamburger-menu-opened.svg') }}" alt="hamburger menu"
                         class="w-10 absolute top-0 left-0 hidden">
                 </div>
             </div>
         </div>
 
-        <div class="bg-darkerGreen mt-14 py-5 text-white font-ubuntu w-full flex flex-col items-center">
-            <div class="flex justify-start gap-4 py-2 w-1/2 border-b">
-                <img src="{{ asset('images/menu_icons/home.svg') }}" alt="Főoldal ikon"
-                class="w-8">
-                <p class="content-center">Főoldal</p>
-            </div>
-            <div class="flex justify-start gap-4 py-2 w-1/2 border-b">
-                <img src="{{ asset('images/menu_icons/me.svg') }}" alt="Főoldal ikon"
-                class="w-8">
-                <p class="content-center">Rólam</p>
-            </div>
-            <div class="flex justify-start gap-4 py-2 w-1/2 border-b">
-                <img src="{{ asset('images/menu_icons/tech.svg') }}" alt="Főoldal ikon"
-                class="w-8">
-                <p class="content-center">Technológiák</p>
-            </div>
-            <div class="flex justify-start gap-4 py-2 w-1/2 border-b">
-                <img src="{{ asset('images/menu_icons/project.svg') }}" alt="Főoldal ikon"
-                class="w-8">
-                <p class="content-center">Projektek</p>
-            </div>
-            <div class="flex justify-start gap-4 py-2 w-1/2 border-b">
-                <img src="{{ asset('images/menu_icons/study.svg') }}" alt="Főoldal ikon"
-                class="w-8">
-                <p class="content-center">Tanulmányok</p>
-            </div>
-            <div class="flex justify-start gap-4 py-2 w-1/2 border-b">
-                <img src="{{ asset('images/menu_icons/contact.svg') }}" alt="Főoldal ikon"
-                class="w-8">
-                <p class="content-center">Elérhetőségek</p>
-            </div>    
-        </div>
         <div>
-            <img src="{{ asset('images/menu_icons/menu_divider.svg') }}" alt="Menü határoló">
+            <nav class="bg-darkerGreen mt-14 py-5 text-white font-ubuntu w-full flex flex-col items-center">
+                <div class="flex justify-start gap-4 py-5 w-1/2 border-b">
+                    <img src="{{ asset('images/menu_icons/home.svg') }}" alt="Főoldal ikon"
+                    class="w-8">
+                    <p class="content-center">Főoldal</p>
+                </div>
+                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <img src="{{ asset('images/menu_icons/me.svg') }}" alt="Főoldal ikon"
+                    class="w-8">
+                    <p class="content-center">Rólam</p>
+                </div>
+                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <img src="{{ asset('images/menu_icons/tech.svg') }}" alt="Főoldal ikon"
+                    class="w-8">
+                    <p class="content-center">Technológiák</p>
+                </div>
+                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <img src="{{ asset('images/menu_icons/project.svg') }}" alt="Főoldal ikon"
+                    class="w-8">
+                    <p class="content-center">Projektek</p>
+                </div>
+                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <img src="{{ asset('images/menu_icons/study.svg') }}" alt="Főoldal ikon"
+                    class="w-8">
+                    <p class="content-center">Tanulmányok</p>
+                </div>
+                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <img src="{{ asset('images/menu_icons/contact.svg') }}" alt="Főoldal ikon"
+                    class="w-8">
+                    <p class="content-center">Elérhetőségek</p>
+                </div>    
+            </nav>
+            <div>
+                <img src="{{ asset('images/menu_icons/menu_divider.svg') }}" alt="Menü határoló">
+            </div>
         </div>
+        
 
         <main>
             @yield('content')
