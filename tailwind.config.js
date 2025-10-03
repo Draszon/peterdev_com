@@ -26,17 +26,17 @@ export default {
             },
             keyframes: {
                 appear: {
-                    '0%': {opacity: '0'},
-                    '100%': {opacity: '1'},
+                    '0%': {maxHeight: '0px'},
+                    '100%': {maxHeight: '486px'},
                 },
                 disappear: {
-                    '0%': {opacity: '1'},
-                    '100%': {opacity: '0'},
+                    '0%': {maxHeight: '486px'},
+                    '100%': {maxHeight: '0px'},
                 },
             },
             animation: {
-                appear: '.2s ease forwards',
-                disappear: '.2s ease forwards',
+                appear: 'appear .2s ease forwards',
+                disappear: 'disappear .2s ease forwards',
             }
         },
     },

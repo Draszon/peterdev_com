@@ -17,7 +17,7 @@
 
         <title>@yield('title', 'Péter')</title>
 
-        <link rel="icon" type="image/png" href="{{ asset('images/logo_icon.svg') }}">
+        <link rel="icon" type="image/png" href="{{ asset('images/page_logo.png') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div>
+        <div id="nav-menu" class="h-0 overflow-hidden">
             <nav class="bg-darkerGreen mt-14 py-5 text-white font-ubuntu w-full flex flex-col items-center">
                 <div class="flex justify-start gap-4 py-5 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/home.svg') }}" alt="Főoldal ikon"
