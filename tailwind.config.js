@@ -12,20 +12,17 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                //alapértelmezett az inter-font, amúgy 
+                //alapértelmezett az inter-font, a többit pedig váltogatom
                 sans: ['Inter', 'sans-serif', ...defaultTheme.fontFamily.sans],
-                inter: ['Inter', 'sans-serif'],
                 ubuntu: ['Ubuntu', 'sans-serif'],
             },
             colors: {
                 //saját színek
                 green: '#00A96E',
                 orange: '#FF6E14',
-                white: 'FFFFFF',
-                mainBg: '#082026',
-                menuBg: '#15333B',
-                font: '#082026',
-                
+                white: '#FFFFFF',
+                darkGreen: '#082026',
+                darkerGreen: '#15333B',
             }
         },
     },
