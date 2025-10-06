@@ -9,6 +9,11 @@ export default {
         './resources/views/**/*.blade.php',
     ],
 
+    safelist: [
+        'animate-appear',
+        'animate-disappear',
+    ],
+
     theme: {
         extend: {
             fontFamily: {
@@ -30,13 +35,13 @@ export default {
                     '100%': {maxHeight: '486px'},
                 },
                 disappear: {
-                    '0%': {maxHeight: '100%'},
-                    '100%': {maxHeight: '0%'},
+                    '0%': {maxHeight: '486px'},
+                    '100%': {maxHeight: '0px'},
                 },
             },
             animation: {
-                appear: 'appear .5s ease forwards',
-                disappear: 'disappear .5s ease forwards',
+                appear: 'appear .5s ease-in-out forwards',
+                disappear: 'disappear .5s ease-in-out forwards',
             }
         },
     },

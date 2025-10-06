@@ -19,7 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
       menuClosed.classList.toggle("hidden");
 
       navMenu.classList.remove("animate-disappear", "animate-appear");
-      navMenu.classList.add("animate-disappear");      
+      navMenu.classList.add("animate-disappear");
+      
+      navMenu.addEventListener("animationend", () => {
+        navMenu.classList.add("h-0");
+        navMenu.classList.remove("animate-disappear");
+      }, { once: true });
     });
 
 
