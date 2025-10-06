@@ -46,36 +46,36 @@
 
         <div id="nav-menu" class="overflow-hidden h-0">
             <nav class="bg-darkerGreen mt-14 py-5 text-white font-ubuntu w-full flex flex-col items-center">
-                <div class="flex justify-start gap-4 py-5 w-1/2 border-b">
+                <a href="#" class="flex justify-start gap-4 py-5 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/home.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Főoldal</p>
-                </div>
-                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                </a>
+                <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/me.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Rólam</p>
-                </div>
-                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                </a>
+                <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/tech.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Technológiák</p>
-                </div>
-                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                </a>
+                <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/project.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Projektek</p>
-                </div>
-                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                </a>
+                <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/study.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Tanulmányok</p>
-                </div>
-                <div class="flex justify-start gap-4 py-3 w-1/2 border-b">
+                </a>
+                <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                     <img src="{{ asset('images/menu_icons/contact.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Elérhetőségek</p>
-                </div>
+                </a>
             </nav>
             <div>
                 <img src="{{ asset('images/menu_icons/menu_divider.svg') }}" alt="Menü határoló">
@@ -83,8 +83,11 @@
         </div>
 
         <main>
-            
             @yield('content')
         </main>
+
+        <footer class="h-20 flex items-center justify-center text-white text-sm bg-darkerGreen">
+            <p>© <span id="footer-year"></span> DRASZON Minden jog fenntartva.</p>
+        </footer>
     </body>
 </html>

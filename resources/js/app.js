@@ -1,6 +1,6 @@
 import './bootstrap';
 
-import './menu.js';
+import './main.js';
 
 import Alpine from 'alpinejs';
 
