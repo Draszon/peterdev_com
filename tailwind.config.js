@@ -30,13 +30,13 @@ export default {
                     '100%': {maxHeight: '486px'},
                 },
                 disappear: {
-                    '0%': {maxHeight: '486px'},
-                    '100%': {maxHeight: '0px'},
+                    '0%': {maxHeight: '100%'},
+                    '100%': {maxHeight: '0%'},
                 },
             },
             animation: {
-                appear: 'appear .2s ease forwards',
-                disappear: 'disappear .2s ease forwards',
+                appear: 'appear .5s ease forwards',
+                disappear: 'disappear .5s ease forwards',
             }
         },
     },

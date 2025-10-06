@@ -75,13 +75,12 @@
                     <img src="{{ asset('images/menu_icons/contact.svg') }}" alt="Főoldal ikon"
                     class="w-8">
                     <p class="content-center">Elérhetőségek</p>
-                </div>    
+                </div>
             </nav>
             <div>
                 <img src="{{ asset('images/menu_icons/menu_divider.svg') }}" alt="Menü határoló">
             </div>
         </div>
-        
 
         <main>
             @yield('content')
