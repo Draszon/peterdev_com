@@ -1,5 +1,5 @@
 "use strict";
-const menuOpen = (menuClose, menuOpen, menu) => {
+const handleMenuOpen = (menuClose, menuOpen, menu) => {
   menuClose.classList.toggle("hidden");
   menuOpen.classList.toggle("hidden");
 
@@ -7,7 +7,7 @@ const menuOpen = (menuClose, menuOpen, menu) => {
   menu.classList.add("animate-appear");
 }
 
-const menuClose = (menuOpen, menuClose, menu) => {
+const handleMenuClose = (menuOpen, menuClose, menu) => {
   menuOpen.classList.toggle("hidden");
   menuClose.classList.toggle("hidden");
 
@@ -20,22 +20,23 @@ const menuClose = (menuOpen, menuClose, menu) => {
   }, { once: true });
 }
 
-
 const menu = () => {
   const menuClosed = document.getElementById("menu-closed");
   const menuOpened = document.getElementById("menu-opened");
   const navMenu = document.getElementById("nav-menu");
 
-  const allMenu = document.querySelectorAll(".nav.menu");
+  const allMenu = document.querySelectorAll(".nav-menu");
+  allMenu.forEach(menuItem => {
+    menuItem.addEventListener('click', () => handleMenuClose(menuClosed, menuOpened, navMenu));
+  });
 
-  
-    
+  //a menügombokra kattintáskor is becsukja a menüt
   menuClosed.addEventListener("click", () => {
-    menuOpen(menuClosed, menuOpened, navMenu);
+    handleMenuOpen(menuClosed, menuOpened, navMenu);
   });
     
   menuOpened.addEventListener("click", () => {
-    menuClose(menuClosed, menuOpened, navMenu);
+    handleMenuClose(menuClosed, menuOpened, navMenu);
   });
 }
 
