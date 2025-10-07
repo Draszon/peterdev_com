@@ -24,7 +24,7 @@ export default {
             colors: {
                 //saját színek
                 green: '#00A96E',
-                dGreen: '#008758',
+                lightGreen: '#00BD7B',
                 orange: '#FF6E14',
                 white: '#FFFFFF',
                 darkGreen: '#082026',
