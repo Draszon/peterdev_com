@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
     </head>
     <body class="font-sans antialiased text-darkGreen bg-darkGreen scroll-smooth">
         <div class="fixed top-0 w-full z-10">
-            <div class="flex justify-between p-2 bg-darkerGreen">
+            <div class="flex justify-between p-2 bg-darkerGreen/80 backdrop-blur-md">
                 <div class="flex">
                     <img src="{{ asset('images/logo_icon.svg') }}" alt="logo"
                         class="w-10">
@@ -44,41 +44,38 @@
             </div>
 
             <div id="nav-menu" class="overflow-hidden h-0 z-10">
-                <nav class="bg-darkerGreen pb-10 text-white font-ubuntu w-full flex flex-col items-center">
+                <nav class="bg-darkerGreen bg-darkerGreen/80 backdrop-blur-md pb-10 text-white font-ubuntu w-full flex flex-col items-center">
                     <a href="#" class="nav-menu flex justify-start gap-4 py-5 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/home.svg') }}" alt="Főoldal ikon"
                         class="w-8">
                         <p class="content-center">Főoldal</p>
                     </a>
-                    <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <a href="#about-me" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/me.svg') }}" alt="Főoldal ikon"
                         class="w-8">
                         <p class="content-center">Rólam</p>
                     </a>
-                    <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <a href="#tech-stack" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/tech.svg') }}" alt="Főoldal ikon"
                         class="w-8">
                         <p class="content-center">Technológiák</p>
                     </a>
-                    <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <a href="#projects" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/project.svg') }}" alt="Főoldal ikon"
                         class="w-8">
                         <p class="content-center">Projektek</p>
                     </a>
-                    <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <a href="#timeline" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/study.svg') }}" alt="Főoldal ikon"
                         class="w-8">
                         <p class="content-center">Tanulmányok</p>
                     </a>
-                    <a href="#" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
+                    <a href="#contacts" class="nav-menu flex justify-start gap-4 py-3 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/contact.svg') }}" alt="Főoldal ikon"
                         class="w-8">
                         <p class="content-center">Elérhetőségek</p>
                     </a>
                 </nav>
-                <div>
-                    <img src="{{ asset('images/menu_icons/menu_divider.svg') }}" alt="Menü határoló">
-                </div>
             </div>
         </div>
 
