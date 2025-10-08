@@ -237,7 +237,7 @@
     </div>
 </section>
 
-<section id="contacts" class="bg-white py-10 px-2">
+<section id="contacts" class="h-72 bg-white py-10 px-2">
     <div class="mb-10">
         <h2 class="font-bold font-ubuntu text-2xl text-center mb-3">
             <span class="text-orange">&lt;</span> Kapcsolat <span class="text-orange">/&gt;</span>
@@ -249,7 +249,11 @@
 
     <div>
         <div>
-            
+            <div class="w-full max-w-14">
+                <img src="{{ asset('images/contact_icons/email.svg') }}" alt="email" class="w-full">
+            </div>
+            <h3>Email</h3>
+            <p>info@peterdev.hu</p>
         </div>
     </div>
 </section>

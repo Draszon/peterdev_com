@@ -84,7 +84,7 @@
         </main>
 
         <footer class="h-20 flex items-center justify-center text-white text-sm bg-darkerGreen">
-            <p>© <span id="footer-year"></span> DRASZON Minden jog fenntartva.</p>
+            <p>© <span id="footer-year"></span> DRASZON | Minden jog fenntartva.</p>
         </footer>
     </body>
 </html>
