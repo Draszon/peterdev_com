@@ -237,7 +237,8 @@
     </div>
 </section>
 
-<section id="contacts" class="h-72 bg-white py-10 px-2">
+<!---->
+<section id="contacts" class="bg-white py-10 px-2 max-h-56">
     <div class="mb-10">
         <h2 class="font-bold font-ubuntu text-2xl text-center mb-3">
             <span class="text-orange">&lt;</span> Kapcsolat <span class="text-orange">/&gt;</span>
@@ -246,15 +247,32 @@
             <span class="text-orange">{</span> Ha szeretnél velem dolgozni vagy kérdésed van, keress bátran <span class="text-orange">}</span>
         </h2>
     </div>
-
-    <div>
-        <div>
-            <div class="w-full max-w-14">
+</section>
+<div class="-mt-16 mb-16">
+    <div class="flex flex-wrap gap-5 md:gap-20 justify-center">
+        <a class="bg-white cursor-pointer flex flex-col items-center justify-center text-center rounded-2xl w-48 h-48 shadow-xl">
+            <div class="w-full max-w-16">
                 <img src="{{ asset('images/contact_icons/email.svg') }}" alt="email" class="w-full">
             </div>
-            <h3>Email</h3>
+            <h3 class="m-2 font-bold">Email</h3>
             <p>info@peterdev.hu</p>
-        </div>
+        </a>
+
+        <a href="" class="bg-white cursor-pointer flex flex-col items-center justify-center text-center rounded-2xl w-48 h-48 shadow-xl">
+            <div class="w-full max-w-16">
+                <img src="{{ asset('images/contact_icons/linkedin.svg') }}" alt="linkedIn" class="w-full">
+            </div>
+            <h3 class="m-2 font-bold">LinkedIn</h3>
+            <p>szpeterr</p>
+        </a>
+
+        <a class="bg-white cursor-pointer flex flex-col items-center justify-center text-center rounded-2xl w-48 h-48 shadow-xl">
+            <div class="w-full max-w-16">
+                <img src="{{ asset('images/contact_icons/github.svg') }}" alt="github" class="w-full">
+            </div>
+            <h3 class="m-2 font-bold">Github</h3>
+            <p>github.com/Draszon</p>
+        </a>        
     </div>
-</section>
+</div>
 @endsection
