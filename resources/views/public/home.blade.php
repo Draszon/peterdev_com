@@ -6,7 +6,7 @@
 
 <!--HEADER-->
 <header class="mt-20 text-white">
-    <div class="mx-2">
+    <div class="mx-2 md:flex md:flex-row">
         <div class="mb-10">
             <div class="font-bold font-ubuntu text-2xl">
                 <h1><span class="text-orange">&lt;</span> Szia, Péter vagyok <span class="text-orange">/&gt;</span></h1>
@@ -224,20 +224,74 @@
 </section>
 
 <!--TIMELINE-->
-<section id="timeline" class="text-white py-10 px-2">
+<section id="timeline" class="text-white py-10 px-4">
     <div>
         <h2 class="font-bold font-ubuntu text-2xl text-center mb-10">
             <span class="text-orange">&lt;</span> Tanulmányok <span class="text-orange">/&gt;</span>
         </h2>
         
-        <div>
-            <div></div>
-            <div></div>
+        <div class="flex flex-row justify-center">
+            <div class="w-0 rounded-3xl border-4 border-green"></div>
+            <div class="ml-6">
+                <div class="mb-20 relative">
+                    <div class="bg-orange rounded-full w-5 h-5 absolute -left-9 top-4"></div>
+                    <div class="bg-green h-12 max-w-60 rounded-full flex items-center justify-center font-bold font-ubuntu text-xl">
+                        <p>2018 Január</p>
+                    </div>
+                    <div class="my-4 font-bold font-ubuntu text-lg">
+                        <span class="text-orange">{</span> Tanulmányok befejezése <span class="text-orange">}</span>
+                    </div>
+                    
+                    <div class="text-darkerGreen bg-white rounded-md p-6 max-w-[500px]">
+                        <p>
+                            Az egyetemen programtervező informatikus asszisztensként fejeztem be felsőoktatási
+                            szakképzésemet. Már ekkor közelebb kerültem a szoftverfejlesztéshez, és elkezdtem
+                            érdeklődni a web és technológia világa iránt.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-20 relative">
+                    <div class="bg-orange rounded-full w-5 h-5 absolute -left-9 top-4"></div>
+                    <div class="bg-green h-12 max-w-60 rounded-full flex items-center justify-center font-bold font-ubuntu text-xl">
+                        <p>2018 Január</p>
+                    </div>
+                    <div class="my-4 font-bold font-ubuntu text-lg">
+                        <span class="text-orange">{</span> Tanulmányok befejezése <span class="text-orange">}</span>
+                    </div>
+                    
+                    <div class="text-darkerGreen bg-white rounded-md p-6 max-w-[500px]">
+                        <p>
+                            Az egyetemen programtervező informatikus asszisztensként fejeztem be felsőoktatási
+                            szakképzésemet. Már ekkor közelebb kerültem a szoftverfejlesztéshez, és elkezdtem
+                            érdeklődni a web és technológia világa iránt.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-20 relative">
+                    <div class="bg-orange rounded-full w-5 h-5 absolute -left-9 top-4"></div>
+                    <div class="bg-green h-12 max-w-60 rounded-full flex items-center justify-center font-bold font-ubuntu text-xl">
+                        <p>2018 Január</p>
+                    </div>
+                    <div class="my-4 font-bold font-ubuntu text-lg">
+                        <span class="text-orange">{</span> Tanulmányok befejezése <span class="text-orange">}</span>
+                    </div>
+                    
+                    <div class="text-darkerGreen bg-white rounded-md p-6 max-w-[500px]">
+                        <p>
+                            Az egyetemen programtervező informatikus asszisztensként fejeztem be felsőoktatási
+                            szakképzésemet. Már ekkor közelebb kerültem a szoftverfejlesztéshez, és elkezdtem
+                            érdeklődni a web és technológia világa iránt.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!---->
+<!--CONTACTS-->
 <section id="contacts" class="bg-white py-10 px-2 max-h-56">
     <div class="mb-10">
         <h2 class="font-bold font-ubuntu text-2xl text-center mb-3">
