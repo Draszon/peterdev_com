@@ -6,40 +6,40 @@
 
 <!--HEADER-->
 <header class="mt-20 text-white">
-    <div class="mx-2 md:flex md:flex-row">
-        <div class="mb-10">
-            <div class="font-bold font-ubuntu text-2xl">
-                <h1><span class="text-orange">&lt;</span> Szia, Péter vagyok <span class="text-orange">/&gt;</span></h1>
-                <h2 class="text-lg text-green"><span class="text-orange">{</span> Junior webfejlesztő <span class="text-orange">}</span></h2>
+    <div class="mx-2 md:my-20 md:mt-32 md:flex md:flex-row lg:justify-center">
+        <div class="mb-10 md:mb-0 lg:flex lg:flex-col lg:justify-center">
+            <div class="font-bold font-ubuntu">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl"><span class="text-orange">&lt;</span> Szia, Péter vagyok <span class="text-orange">/&gt;</span></h1>
+                <h2 class="text-lg lg:text-2xl text-green"><span class="text-orange">{</span> Junior webfejlesztő <span class="text-orange">}</span></h2>
             </div>
-            <div class="my-10">
+            <div class="my-10 lg:max-w-[580px]">
                 <p>
                     Ez pedig a portfólió oldalam, ahol bemutatom az eddigi
                     projektjeimet és tanulmányaimat. Laravel, TailwindCSS és 
                     JavaScript alapokon építek reszponzív, modern weboldalakat.
                 </p>
             </div>
-            <div class="flex flex-row gap-5 justify-center">
+            <div class="flex flex-row gap-5 justify-center md:justify-start">
                 <a href="#" class="
-                    py-2 px-5 transition duration-300 bg-green hover:bg-lightGreen hover:text-darkGreen rounded-full">Munkáim</a>
+                    py-2 px-5 md:py-3 md:px-10 transition duration-300 bg-green hover:bg-lightGreen hover:text-darkGreen rounded-full">Munkáim</a>
                 <a href="#" class="
-                    py-2 px-5 transition duration-300 bg-green hover:bg-lightGreen hover:text-darkGreen rounded-full">Kapcsolat</a>
+                    py-2 px-5 md:py-3 md:px-10 transition duration-300 bg-green hover:bg-lightGreen hover:text-darkGreen rounded-full">Kapcsolat</a>
             </div>
         </div>
         <div class="flex justify-center">
-            <img src="{{ asset('images/icons/me.svg') }}" alt="Fényképem" class="h-48">
+            <img src="{{ asset('images/icons/me.svg') }}" alt="Fényképem" class="w-48 md:min-w-80 xl:min-w-[482px] md:ml-5">
         </div>
     </div>
 </header>
 
 <!--ABOUT ME-->
 <section id="about-me" class="text-darkerGreen bg-white mt-10 py-10 px-2">
-    <div>
-        <div class="flex justify-center">
-            <img src="{{ asset('images/icons/me_programming.svg') }}" alt="programming icon" class="h-48">
+    <div class="md:flex flex-row">
+        <div class="flex justify-center md:mr-5">
+            <img src="{{ asset('images/icons/me_programming.svg') }}" alt="programming icon" class="w-48 md:min-w-80">
         </div>
         <div>
-            <h2 class="font-bold font-ubuntu text-2xl mt-10 mb-5 text-center"><span class="text-orange">&lt;</span> Ismerj meg <span class="text-orange">/&gt;</span></h2>
+            <h2 class="font-bold font-ubuntu text-2xl mt-10 mb-5 md:mt-0 text-center"><span class="text-orange">&lt;</span> Ismerj meg <span class="text-orange">/&gt;</span></h2>
             <p>
                 Főállásban rendszerüzemeltetéssel foglalkozom, ahol Linux-alapú rendszerek stabil,
                 biztonságos működéséért felelek. Ez a háttér fontos alapot ad a technikai szemléletemhez,

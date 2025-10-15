@@ -29,17 +29,27 @@
     </head>
     <body class="font-sans antialiased text-darkGreen bg-darkGreen scroll-smooth">
         <div class="fixed top-0 w-full z-10">
-            <div class="flex justify-between p-2 bg-darkerGreen/80 backdrop-blur-md">
+            <div class="flex justify-between p-2 bg-darkerGreen/80 backdrop-blur-md ">
                 <div class="flex">
                     <img src="{{ asset('images/logo_icon.svg') }}" alt="logo"
                         class="w-10">
                     <p class="font-ubuntu font-bold text-green flex items-center text-xl">Peter</p>
                 </div>
-                <div class="flex relative ml-auto w-10 h-10 cursor-pointer">
+                <div class="flex relative ml-auto w-10 h-10 cursor-pointer lg:hidden">
                     <img id="menu-closed" src="{{ asset('images/menu_icons/hamburger-menu-closed.svg') }}" alt="hamburger menu"
                         class="w-10 absolute top-0 left-0">
                     <img id="menu-opened" src="{{ asset('images/menu_icons/hamburger-menu-opened.svg') }}" alt="hamburger menu"
                         class="w-10 absolute top-0 left-0 hidden">
+                </div>
+                <div class="hidden lg:block text-white font-ubuntu ">
+                    <ul class="flex flex-row gap-5">
+                        <li><a href="#" class="">Főoldal</a></li>
+                        <li><a href="#" class="">Rólam</a></li>
+                        <li><a href="#" class="">Technológiák</a></li>
+                        <li><a href="#" class="">Projektek</a></li>
+                        <li><a href="#" class="">Tanulmányok</a></li>
+                        <li><a href="#" class="">Elérhetőségek</a></li>
+                    </ul>
                 </div>
             </div>
 
