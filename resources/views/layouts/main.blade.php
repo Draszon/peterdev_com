@@ -28,33 +28,33 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased text-darkGreen bg-darkGreen scroll-smooth">
-        <div class="fixed top-0 w-full z-10">
-            <div class="flex justify-between p-2 bg-darkerGreen/80 backdrop-blur-md ">
+        <div class="fixed top-0 w-full z-10 bg-darkerGreen/80 backdrop-blur-md">
+            <div class="flex justify-between h-16 xl:max-w-[1200px] xl:mx-auto">
                 <div class="flex">
                     <img src="{{ asset('images/logo_icon.svg') }}" alt="logo"
                         class="w-10">
                     <p class="font-ubuntu font-bold text-green flex items-center text-xl">Peter</p>
                 </div>
-                <div class="flex relative ml-auto w-10 h-10 cursor-pointer lg:hidden">
+                <div class="flex relative ml-auto w-10 h-10 cursor-pointer md:hidden">
                     <img id="menu-closed" src="{{ asset('images/menu_icons/hamburger-menu-closed.svg') }}" alt="hamburger menu"
-                        class="w-10 absolute top-0 left-0">
+                        class="w-10 absolute top-3 left-0">
                     <img id="menu-opened" src="{{ asset('images/menu_icons/hamburger-menu-opened.svg') }}" alt="hamburger menu"
-                        class="w-10 absolute top-0 left-0 hidden">
+                        class="w-10 absolute top-3 left-0 hidden">
                 </div>
-                <div class="hidden lg:block text-white font-ubuntu ">
-                    <ul class="flex flex-row gap-5">
-                        <li><a href="#" class="">Főoldal</a></li>
-                        <li><a href="#" class="">Rólam</a></li>
-                        <li><a href="#" class="">Technológiák</a></li>
-                        <li><a href="#" class="">Projektek</a></li>
-                        <li><a href="#" class="">Tanulmányok</a></li>
-                        <li><a href="#" class="">Elérhetőségek</a></li>
+                <div class="hidden text-white font-ubuntu md:flex md:items-center">
+                    <ul class="flex flex-row h-full">
+                        <li class="h-full hover:bg-green hover:text-darkGreen transition delay-75 rounded-sm"><a class="mx-3 h-full flex items-center" href="#">Főoldal</a></li>
+                        <li class="h-full hover:bg-green hover:text-darkGreen transition delay-75 rounded-sm"><a class="mx-3 h-full flex items-center" href="#about-me">Rólam</a></li>
+                        <li class="h-full hover:bg-green hover:text-darkGreen transition delay-75 rounded-sm"><a class="mx-3 h-full flex items-center" href="#tech-stack">Technológiák</a></li>
+                        <li class="h-full hover:bg-green hover:text-darkGreen transition delay-75 rounded-sm"><a class="mx-3 h-full flex items-center" href="#projects">Projektek</a></li>
+                        <li class="h-full hover:bg-green hover:text-darkGreen transition delay-75 rounded-sm"><a class="mx-3 h-full flex items-center" href="#timeline">Tanulmányok</a></li>
+                        <li class="h-full hover:bg-green hover:text-darkGreen transition delay-75 rounded-sm"><a class="mx-3 h-full flex items-center" href="#contacts">Elérhetőségek</a></li>
                     </ul>
                 </div>
             </div>
 
             <div id="nav-menu" class="overflow-hidden h-0 z-10">
-                <nav class="bg-darkerGreen bg-darkerGreen/80 backdrop-blur-md pb-10 text-white font-ubuntu w-full flex flex-col items-center">
+                <nav class=" pb-10 text-white font-ubuntu w-full flex flex-col items-center">
                     <a href="#" class="nav-menu flex justify-start gap-4 py-5 w-1/2 border-b">
                         <img src="{{ asset('images/menu_icons/home.svg') }}" alt="Főoldal ikon"
                         class="w-8">
