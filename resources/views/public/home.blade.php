@@ -8,26 +8,24 @@
 <header class="mt-20 text-white">
     <div class="mx-2 md:my-20 md:mt-32 md:flex md:flex-row lg:justify-center lg:max-w-[1200px] lg:mx-auto xl:justify-between">
         <div class="mb-10 md:mb-0 lg:flex lg:flex-col lg:justify-center">
+            @foreach ($introductions as $introduction)
             <div class="font-bold font-ubuntu">
                 <h1 class="text-2xl md:text-3xl lg:text-5xl">
-                    <span class="text-orange">&lt;</span> Szia, Péter vagyok <span class="text-orange">/&gt;</span>
+                    <span class="text-orange">&lt;</span> {{ $introduction->title }} <span class="text-orange">/&gt;</span>
                 </h1>
                 <h2 class="text-lg lg:text-2xl text-green">
-                    <span class="text-orange">{</span> Junior webfejlesztő <span class="text-orange">}</span>
+                    <span class="text-orange">{</span> {{ $introduction->subtitle }} <span class="text-orange">}</span>
                 </h2>
             </div>
             <div class="my-10 lg:max-w-[580px]">
-                <p>
-                    Ez pedig a portfólió oldalam, ahol bemutatom az eddigi
-                    projektjeimet és tanulmányaimat. Laravel, TailwindCSS és 
-                    JavaScript alapokon építek reszponzív, modern weboldalakat.
-                </p>
+                <p>{{ $introduction->content }}</p>
             </div>
+            @endforeach
             <div class="flex flex-row gap-5 justify-center md:justify-start">
-                <a href="#" class="
+                <a href="#projects" class="
                     py-2 px-5 md:py-3 md:px-10 transition duration-300 bg-green 
                     hover:bg-lightGreen hover:text-darkGreen rounded-full">Munkáim</a>
-                <a href="#" class="
+                <a href="#contacts" class="
                     py-2 px-5 md:py-3 md:px-10 transition duration-300 bg-green 
                     hover:bg-lightGreen hover:text-darkGreen rounded-full">Kapcsolat</a>
             </div>
@@ -46,21 +44,15 @@
             <img src="{{ asset('images/icons/me_programming.svg') }}" alt="programming icon"
                 class="w-48 md:min-w-80 lg:min-w-96 xl:min-w-[500px]">
         </div>
+        @foreach ($aboutmes as $aboutme)
         <div class="flex flex-col justify-center">
             <h2
                 class="font-bold font-ubuntu text-2xl md:text-3xl lg:text-4xl mt-10 mb-5 md:mt-0 text-center">
-                <span class="text-orange">&lt;</span> Ismerj meg <span class="text-orange">/&gt;</span>
+                <span class="text-orange">&lt;</span> {{ $aboutme->title }} <span class="text-orange">/&gt;</span>
             </h2>
-            <p>
-                Főállásban rendszerüzemeltetéssel foglalkozom, ahol Linux-alapú rendszerek stabil,
-                biztonságos működéséért felelek. Ez a háttér fontos alapot ad a technikai szemléletemhez,
-                de ami igazán lelkesít, az a webfejlesztés.
-                A kódolás számomra nemcsak eszköz, hanem kreatív eszköz – szeretek ötleteket megvalósítani, 
-                unkciókat tervezni és működő webalkalmazásokat építeni. A fejlesztés világa számomra egy
-                izgalmas terep, ahol mindig van mit tanulni és fejleszteni.
-                Ez az oldal is ennek a szenvedélyemnek a része: gyakorlás, tanulás és önkifejezés egyben.
-            </p>
+            <p>{{ $aboutme->content }}</p>
         </div>
+        @endforeach
     </div>
 </section>
 
@@ -75,72 +67,19 @@
                 <span class="text-orange">{</span> Eszközök, amikkel dolgozom <span class="text-orange">}</span>
             </h2>
         </div>
-        <div class="flex justify-center flex-wrap items-center gap-5 lg:gap-20">
-            <div class="text-darkerGreen bg-white rounded-lg w-60 py-5">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/tech_icons/html.svg') }}" alt="HTML ikon"
+        <div class="flex justify-center items-center flex-wrap  gap-5 lg:gap-20">
+            @foreach ($techStacks as $techStack)
+            <div class="text-darkerGreen bg-white rounded-lg w-60 h-72 py-5 flex items-center">
+                <div class="flex flex-col items-center p-2">
+                    <img src="{{ asset('images/tech_icons/' . $techStack->path) }}" alt="HTML ikon"
                         class="h-24">
                     <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
-                        <span class="text-orange">&lt;</span>HTML<span class="text-orange">/&gt;</span>
+                        <span class="text-orange">&lt;</span>{{ $techStack->tech_name }}<span class="text-orange">/&gt;</span>
                     </h3>
-                    <p class="text-center">A web alapja, amivel a struktúrát építem fel.</p>
+                    <p class="text-center">{{ $techStack->description }}</p>
                 </div>
             </div>
-
-            <div class="text-darkerGreen bg-white rounded-lg w-60 py-5">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/tech_icons/html.svg') }}" alt="HTML ikon"
-                        class="h-24">
-                    <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
-                        <span class="text-orange">&lt;</span>HTML<span class="text-orange">/&gt;</span>
-                    </h3>
-                    <p class="text-center">A web alapja, amivel a struktúrát építem fel.</p>
-                </div>
-            </div>
-
-            <div class="text-darkerGreen bg-white rounded-lg w-60 py-5">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/tech_icons/html.svg') }}" alt="HTML ikon"
-                        class="h-24">
-                    <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
-                        <span class="text-orange">&lt;</span>HTML<span class="text-orange">/&gt;</span>
-                    </h3>
-                    <p class="text-center">A web alapja, amivel a struktúrát építem fel.</p>
-                </div>
-            </div>
-
-            <div class="text-darkerGreen bg-white rounded-lg w-60 py-5">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/tech_icons/html.svg') }}" alt="HTML ikon"
-                        class="h-24">
-                    <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
-                        <span class="text-orange">&lt;</span>HTML<span class="text-orange">/&gt;</span>
-                    </h3>
-                    <p class="text-center">A web alapja, amivel a struktúrát építem fel.</p>
-                </div>
-            </div>
-
-            <div class="text-darkerGreen bg-white rounded-lg w-60 py-5">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/tech_icons/html.svg') }}" alt="HTML ikon"
-                        class="h-24">
-                    <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
-                        <span class="text-orange">&lt;</span>HTML<span class="text-orange">/&gt;</span>
-                    </h3>
-                    <p class="text-center">A web alapja, amivel a struktúrát építem fel.</p>
-                </div>
-            </div>
-
-            <div class="text-darkerGreen bg-white rounded-lg w-60 py-5">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/tech_icons/html.svg') }}" alt="HTML ikon"
-                        class="h-24">
-                    <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
-                        <span class="text-orange">&lt;</span>HTML<span class="text-orange">/&gt;</span>
-                    </h3>
-                    <p class="text-center">A web alapja, amivel a struktúrát építem fel.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
