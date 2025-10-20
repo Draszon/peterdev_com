@@ -76,7 +76,7 @@
                     <h3 class="font-bold font-ubuntu mt-1 m-4 text-xl">
                         <span class="text-orange">&lt;</span>{{ $techStack->tech_name }}<span class="text-orange">/&gt;</span>
                     </h3>
-                    <p class="text-center">{{ $techStack->description }}</p>
+                    <p class="text-center h-20">{{ $techStack->description }}</p>
                 </div>
             </div>
             @endforeach
@@ -92,83 +92,28 @@
         </h2>
 
         <div>
-            <div class="mb-20 flex flex-col lg:flex-row lg:items-center lg:gap-10">
+            @foreach ($projects as $project)
+            <div class="mb-20 flex flex-col {{ $project->id % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row' }} lg:items-center lg:gap-10">
                 <div class="w-full max-w-xl">
-                    <img src="{{ asset('images/projekt_indexek/kucko.png') }}" alt="Kuckó index"
+                    <img src="{{ asset('images/projekt_indexek/' . $project->index_path) }}" alt="Kuckó index"
                         class="rounded-md border border-green w-full h-auto">
                 </div>
                 <div class="lg:w-1/2">
                     <h3 class="font-bold font-ubuntu my-5 text-xl md:text-2xl">
-                        <span class="text-orange">{</span> Kuckó Tanulószoba <span class="text-orange">}</span>
+                        <span class="text-orange">{</span> {{ $project->title }} <span class="text-orange">}</span>
                     </h3>
-                    <p>
-                        Egy magántanár számára készített, modern és letisztult weboldal.
-                        A projekt fő célja egy átlátható, könnyen kezelhető felület megalkotása
-                        volt, ahol a tanulók és szülők gyorsan tájékozódhatnak
-                        az órákról és szolgáltatásokról.
-                    </p>
+                    <p>{{ $project->description }}</p>
                     <div class="my-5">
-                        <p class="font-bold font-ubuntu">Technológiák: </p>
-                        <p>HTML - CSS - VueJs</p>
+                        <p class="font-bold font-ubuntu text-lg">Technológiák: </p>
+                        <p>{{ $project->technology }}</p>
                     </div>
-                    <a href="#" 
+                    <a target="_blank" href="{{ $project->link }}" 
                         class="py-2 px-10 transition duration-300 bg-green hover:bg-lightGreen text-white  rounded-full">
                         Megnézem
                     </a>
                 </div>
             </div>
-
-            <div class="mb-20 flex flex-col lg:flex-row-reverse lg:items-center lg:gap-10">
-                <div class="w-full max-w-xl">
-                    <img src="{{ asset('images/projekt_indexek/kucko.png') }}" alt="Kuckó index"
-                        class="rounded-md border border-green w-full h-auto">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="font-bold font-ubuntu my-5 text-xl md:text-2xl">
-                        <span class="text-orange">{</span> Kuckó Tanulószoba <span class="text-orange">}</span>
-                    </h3>
-                    <p>
-                        Egy magántanár számára készített, modern és letisztult weboldal.
-                        A projekt fő célja egy átlátható, könnyen kezelhető felület megalkotása
-                        volt, ahol a tanulók és szülők gyorsan tájékozódhatnak
-                        az órákról és szolgáltatásokról.
-                    </p>
-                    <div class="my-5">
-                        <p class="font-bold font-ubuntu">Technológiák: </p>
-                        <p>HTML - CSS - VueJs</p>
-                    </div>
-                    <a href="#" 
-                        class="py-2 px-10 transition duration-300 bg-green hover:bg-lightGreen text-white  rounded-full">
-                        Megnézem
-                    </a>
-                </div>
-            </div>
-
-            <div class="mb-20 flex flex-col lg:flex-row lg:items-center lg:gap-10">
-                <div class="w-full max-w-xl">
-                    <img src="{{ asset('images/projekt_indexek/kucko.png') }}" alt="Kuckó index"
-                        class="rounded-md border border-green w-full h-auto">
-                </div>
-                <div class="lg:w-1/2">
-                    <h3 class="font-bold font-ubuntu my-5 text-xl md:text-2xl">
-                        <span class="text-orange">{</span> Kuckó Tanulószoba <span class="text-orange">}</span>
-                    </h3>
-                    <p>
-                        Egy magántanár számára készített, modern és letisztult weboldal.
-                        A projekt fő célja egy átlátható, könnyen kezelhető felület megalkotása
-                        volt, ahol a tanulók és szülők gyorsan tájékozódhatnak
-                        az órákról és szolgáltatásokról.
-                    </p>
-                    <div class="my-5">
-                        <p class="font-bold font-ubuntu">Technológiák: </p>
-                        <p>HTML - CSS - VueJs</p>
-                    </div>
-                    <a href="#" 
-                        class="py-2 px-10 transition duration-300 bg-green hover:bg-lightGreen text-white  rounded-full">
-                        Megnézem
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -183,60 +128,23 @@
         <div class="flex flex-row justify-center">
             <div class="w-0 rounded-3xl border-4 border-green"></div>
             <div class="ml-6">
+
+                @foreach ($studies as $study)
                 <div class="mb-20 relative">
                     <div class="bg-orange rounded-full w-5 h-5 absolute -left-9 top-4"></div>
                     <div class="bg-green h-12 max-w-60 rounded-full flex items-center justify-center font-bold font-ubuntu text-xl">
-                        <p>2018 Január</p>
+                        <p>{{ $study->date }}</p>
                     </div>
                     <div class="my-4 font-bold font-ubuntu text-lg">
-                        <span class="text-orange">{</span> Tanulmányok befejezése <span class="text-orange">}</span>
+                        <span class="text-orange">{</span> {{ $study->title }} <span class="text-orange">}</span>
                     </div>
                     
                     <div class="text-darkerGreen bg-white rounded-md p-6 max-w-[500px]">
-                        <p>
-                            Az egyetemen programtervező informatikus asszisztensként fejeztem be felsőoktatási
-                            szakképzésemet. Már ekkor közelebb kerültem a szoftverfejlesztéshez, és elkezdtem
-                            érdeklődni a web és technológia világa iránt.
-                        </p>
+                        <p>{{ $study->content }}</p>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="mb-20 relative">
-                    <div class="bg-orange rounded-full w-5 h-5 absolute -left-9 top-4"></div>
-                    <div class="bg-green h-12 max-w-60 rounded-full flex items-center justify-center font-bold font-ubuntu text-xl">
-                        <p>2018 Január</p>
-                    </div>
-                    <div class="my-4 font-bold font-ubuntu text-lg">
-                        <span class="text-orange">{</span> Tanulmányok befejezése <span class="text-orange">}</span>
-                    </div>
-                    
-                    <div class="text-darkerGreen bg-white rounded-md p-6 max-w-[500px]">
-                        <p>
-                            Az egyetemen programtervező informatikus asszisztensként fejeztem be felsőoktatási
-                            szakképzésemet. Már ekkor közelebb kerültem a szoftverfejlesztéshez, és elkezdtem
-                            érdeklődni a web és technológia világa iránt.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="mb-20 relative">
-                    <div class="bg-orange rounded-full w-5 h-5 absolute -left-9 top-4"></div>
-                    <div class="bg-green h-12 max-w-60 rounded-full flex items-center justify-center
-                                font-bold font-ubuntu text-xl">
-                        <p>2018 Január</p>
-                    </div>
-                    <div class="my-4 font-bold font-ubuntu text-lg">
-                        <span class="text-orange">{</span> Tanulmányok befejezése <span class="text-orange">}</span>
-                    </div>
-                    
-                    <div class="text-darkerGreen bg-white rounded-md p-6 max-w-[500px]">
-                        <p>
-                            Az egyetemen programtervező informatikus asszisztensként fejeztem be felsőoktatási
-                            szakképzésemet. Már ekkor közelebb kerültem a szoftverfejlesztéshez, és elkezdtem
-                            érdeklődni a web és technológia világa iránt.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -255,35 +163,19 @@
 </section>
 <div class="-mt-16 mb-16">
     <div class="flex flex-wrap gap-5 md:gap-20 justify-center">
-        <a class="
-            bg-white cursor-pointer flex flex-col items-center justify-center
-            text-center rounded-2xl w-48 h-48 shadow-xl transition transform hover:-translate-y-1 hover:scale-110">
-            <div class="w-full max-w-16">
-                <img src="{{ asset('images/contact_icons/email.svg') }}" alt="email" class="w-full">
-            </div>
-            <h3 class="m-2 font-bold">Email</h3>
-            <p>info@peterdev.hu</p>
-        </a>
 
-        <a class="
+        @foreach ($contacts as $contact)
+        <a target="_blank" href="{{ $contact->contact_link }}" class="
             bg-white cursor-pointer flex flex-col items-center justify-center
-            text-center rounded-2xl w-48 h-48 shadow-xl transition transform hover:-translate-y-1 hover:scale-110">
+            text-center rounded-2xl w-56 h-56 shadow-2xl transition transform hover:-translate-y-1 hover:scale-110">
             <div class="w-full max-w-16">
-                <img src="{{ asset('images/contact_icons/linkedin.svg') }}" alt="linkedIn" class="w-full">
+                <img src="{{ asset('images/contact_icons/' . $contact->index_path) }}" alt="{{ $contact->contact_name }}" class="w-full">
             </div>
-            <h3 class="m-2 font-bold">LinkedIn</h3>
-            <p>szpeterr</p>
-        </a>
-
-        <a class="
-            bg-white cursor-pointer flex flex-col items-center justify-center
-            text-center rounded-2xl w-48 h-48 shadow-xl transition transform hover:-translate-y-1 hover:scale-110">
-            <div class="w-full max-w-16">
-                <img src="{{ asset('images/contact_icons/github.svg') }}" alt="github" class="w-full">
-            </div>
-            <h3 class="m-2 font-bold">Github</h3>
-            <p>github.com/Draszon</p>
-        </a>        
+            <h3 class="m-2 font-bold">{{ $contact->contact_name }}</h3>
+            <p>{{ $contact->url }}</p>
+        </a>   
+        @endforeach
+        
     </div>
 </div>
 @endsection

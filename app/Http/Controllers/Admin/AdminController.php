@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\AboutSection;
 use App\Models\Contact;
 use App\Models\Introduction;
@@ -10,7 +11,7 @@ use App\Models\Project;
 use App\Models\TechStack;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     public function index() {
         $introductions = Introduction::all();
@@ -20,7 +21,7 @@ class HomeController extends Controller
         $studies = MyStudy::all();
         $contacts = Contact::all();
 
-        return view('public.home', compact(
+        return view('admin.dashboard', compact(
             'introductions', 
             'aboutmes',
             'techStacks',
