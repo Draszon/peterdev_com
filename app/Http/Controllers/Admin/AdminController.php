@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
+        //admin oldalra minden adatot innen adtok át a kiíratáshoz
         $introductions = Introduction::all();
         $aboutmes = AboutSection::all();
         $techStacks = TechStack::all();

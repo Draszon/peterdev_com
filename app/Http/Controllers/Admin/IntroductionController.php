@@ -16,6 +16,8 @@ class IntroductionController extends Controller
         ]);
 
         try {
+            //megkeresem a frissíteni kívánt element a frontendtől kapott ID alapján
+            //átadom neki a validált adatokat és az update() metódussal végül frissítem
             $post = Introduction::findOrFail($id);
             $post->update($validated);
             return back()->with('introductionMessage', 'Sikeres módosítás!');

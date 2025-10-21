@@ -6,13 +6,13 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <meta name="description" content="
-            Péter vagyok, hobbi programozó és
-    	    webfejlesztő. Régebben Draszonként 
-    	    ismerhettél YouTube-on és Twitchen, ahol gameplay 
-    	    tartalmakat osztottam meg.">
+            Péter vagyok! Ez pedig a portfólió oldalam,
+            ahol bemutatom az eddigi projektjeimet és tanulmányaimat.
+            Laravel, TailwindCSS és JavaScript alapokon építek reszponzív,
+            modern weboldalakat.">
 
         <meta name="keywords" content="webdesign, weboldal, készítés, design, kódolás, hobbi, dizájn, fejlesztés">
-        <meta name="author" content="WEB-Peter">
+        <meta name="author" content="PeterDev">
         <meta name="robots" content="index, follow">
 
         <title>@yield('title', 'Péter')</title>

@@ -12,6 +12,9 @@ class TechStackController extends Controller
         $ids = $request->input('deleted_ids', []);
         
         try {
+            //a frontendről kapott adatok alapján kikeresem a törlendő elemeket
+            //az adatbázisból, majd egy ciklus segítségével egyesével törlöm őket
+            //az indexképeikkel együtt
             $techStacks = TechStack::findOrFail($ids);
             foreach ($techStacks as $techStack) {
                 $imagePath = public_path('images/tech_icons/' . $techStack->path);
@@ -35,12 +38,15 @@ class TechStackController extends Controller
             'tech_name' => 'required|string',
             'description' => 'required|string',
         ]);
-
-        $file = $request->file('path');
-        $fileName = $file->getClientOriginalName();
-        $file->move(public_path('images/tech_icons'), $fileName);
-
+        
         try {
+            //validált .svg kép feltöltése és áthelyezése a tech_icons mappába
+            $file = $request->file('path');
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path('images/tech_icons'), $fileName);
+        
+            //példányosítás, mezők hozzáadása az adatbázis példányhoz, végül
+            //pedig a save() metódussal minden adat rögzítése az adatbázisba
             $tech = new TechStack();
             $tech->tech_name = $request["tech_name"];
             $tech->description = $request["description"];

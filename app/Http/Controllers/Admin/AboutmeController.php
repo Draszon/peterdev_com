@@ -15,6 +15,8 @@ class AboutmeController extends Controller
         ]);
 
         try {
+            //megkeresem a frissíteni kívánt element a frontendtől kapott ID alapján
+            //átadom neki a validált adatokat és az update() metódussal végül frissítem
             $post = AboutSection::findOrFail($id);
             $post->update($validated);
             return back()->with('aboutmeMessage', 'Sikeres módosítás!');
