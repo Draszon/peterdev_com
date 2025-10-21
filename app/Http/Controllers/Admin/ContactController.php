@@ -16,7 +16,10 @@ class ContactController extends Controller
             //az adatbázisból, majd egy ciklus segítségével egyesével törlöm őket            
             $contacts = Contact::findOrFail($ids);
             foreach ($contacts as $contact) {
-                $imagePath = public_path('images/contact_icons/' . $contact->index_path);
+                $basePath = rtrim(env('PUBLIC_PATH', public_path('images')), '/');
+                $imagePath = $basePath . '/contact_icons/' . $contact->index_path;
+
+                //$imagePath = public_path('images/contact_icons/' . $contact->index_path);
                 if (file_exists($imagePath)) {
                     unlink($imagePath);
                 }
@@ -42,7 +45,9 @@ class ContactController extends Controller
         try {
             $file = $request->file('index_path');
             $fileName = $file->getClientOriginalName();
-            $file->move(public_path('images/contact_icons'), $fileName);
+
+            $destinationPath = rtrim(env('PUBLIC_PATH', public_path('images')), '/') . '/contact_icons';
+            $file->move($destinationPath, $fileName);
 
             //nekem puska: ha nem lenne módosítva semmi, mint pl a fájlnév,
             //akkor ennyi elég lenne:

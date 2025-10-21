@@ -16,7 +16,10 @@ class ProjectController extends Controller
             //az adatbázisból, majd egy ciklus segítségével egyesével törlöm őket            
             $projects = Project::findOrFail($ids);
             foreach ($projects as $project) {
-                $imagePath = public_path('images/projekt_indexek/' . $project->index_path);
+                $basePath = rtrim(env('PUBLIC_PATH', public_path('images')), '/');
+                $imagePath = $basePath . '/projekt_indexek/' . $project->index_path;
+
+                //$imagePath = public_path('images/projekt_indexek/' . $project->index_path);
                 if (file_exists($imagePath)) {
                     unlink($imagePath);
                 }
@@ -62,7 +65,11 @@ class ProjectController extends Controller
         try {
             $file = $request->file('index_path');
             $fileName = $file->getClientOriginalName();
-            $file->move(public_path('images/projekt_indexek'), $fileName);
+
+            $destinationPath = rtrim(env('PUBLIC_PATH', public_path('images')), '/') . '/projekt_indexek';
+            $file->move($destinationPath, $fileName);
+
+            //$file->move(public_path('images/projekt_indexek'), $fileName);
 
             //nekem puska: ha nem lenne módosítva semmi, mint pl a fájlnév,
             //akkor ennyi elég lenne:

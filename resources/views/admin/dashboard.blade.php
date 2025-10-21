@@ -310,7 +310,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 max-w-full">
-                    <h1 class="font-bold mb-10">Tanulmányaim rész szerkesztése</h1>
+                    <h1 class="font-bold mb-10">Kapcsolatok rész szerkesztése</h1>
 
                     @if (session('messageDeleteContact'))
                         <p class="font-bold text-green">{{ session('messageDeleteContact') }}</p>

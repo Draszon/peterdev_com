@@ -17,7 +17,10 @@ class TechStackController extends Controller
             //az indexképeikkel együtt
             $techStacks = TechStack::findOrFail($ids);
             foreach ($techStacks as $techStack) {
-                $imagePath = public_path('images/tech_icons/' . $techStack->path);
+                $basePath = rtrim(env('PUBLIC_PATH', public_path('images')), '/');
+                $imagePath = $basePath . '/tech_icons/' . $techStack->path;
+
+                //$imagePath = public_path('images/tech_icons/' . $techStack->path);
                 if (file_exists($imagePath)) {
                     unlink($imagePath);
                 }
@@ -43,7 +46,11 @@ class TechStackController extends Controller
             //validált .svg kép feltöltése és áthelyezése a tech_icons mappába
             $file = $request->file('path');
             $fileName = $file->getClientOriginalName();
-            $file->move(public_path('images/tech_icons'), $fileName);
+
+            $destinationPath = rtrim(env('PUBLIC_PATH', public_path('images')), '/') . '/tech_icons';
+            $file->move($destinationPath, $fileName);
+
+            //$file->move(public_path('images/tech_icons'), $fileName);
         
             //példányosítás, mezők hozzáadása az adatbázis példányhoz, végül
             //pedig a save() metódussal minden adat rögzítése az adatbázisba
